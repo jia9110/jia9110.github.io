@@ -1,0 +1,524 @@
+---
+layout:      post
+title:       电子工程系海外学者短期讲学课程：CMOS工艺前沿技术与应用概论
+excerpt:     <a href=http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq=31564>http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq=31564</a>
+tags:
+  the
+  of
+  and
+  ieee
+  he
+modify_date: 2017-11-23
+---
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+   研究生院办公网内网
+  </title>
+  <link href="/docinfo/css/page.css" rel="stylesheet" type="text/css" />
+ </head>
+ <script language="javascript">
+  &lt;!--
+function commentCheck(){
+	if(document.forms(0).content.value==""){
+		alert("评论内容不能为空!");
+		document.forms(0).content.focus();
+		return false;
+	}
+	if(document.forms(0).anonymous.value=="1"&amp;&amp;
+	document.forms(0).nickName.value==""){
+		document.forms(0).nickName.value="匿名";
+	}
+	return true;
+}
+--&gt;
+ </script>
+ <!-- 得到请求参数 -->
+ <!-- 得到infoColumnVo -->
+ <!-- 得到参数VO -->
+ <!-- 文档计数+1 -->
+ <body>
+  <script type="text/javascript" src="/js/jquery-1[1].3.2.min.js">
+  </script>
+  <script type="text/javascript" src="/js/jxrl-1.0.js">
+  </script>
+  <script type="text/JavaScript">
+   &lt;!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i&lt;a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&amp;&amp;i&lt;a.length&amp;&amp;(x=a[i])&amp;&amp;x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))&gt;0&amp;&amp;parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&amp;&amp;d.all) x=d.all[n]; for (i=0;!x&amp;&amp;i&lt;d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&amp;&amp;d.layers&amp;&amp;i&lt;d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x &amp;&amp; d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i&lt;(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//--&gt;
+  </script>
+  <script type="text/javascript">
+   function search(){
+		var searchValue = document.getElementById('searchValue').value.replace(/^\s+|\s+$/g,"");;
+		if(searchValue == '请输入您要查找的关键字...')searchValue = '';
+		if(searchValue == ''){
+          alert("请输入您要查找的关键字");         
+          document.getElementById('searchValue').focus(); 
+        }else{  
+		  var str = "/docinfo/search.jsp?searchTitle=" + escape(searchValue);
+		  window.open(str);
+		  //window.location.href(str);
+		}		
+}
+
+function searchFocus(text){
+		text.value = '';
+}
+	
+function searchBlur(text){
+		if(text.value == '')
+			text.value = '请输入您要查找的关键字...';
+}
+  </script>
+  <script>
+   $(document).ready(function(){	  
+		getCal_json("/portal/proxy/tsxx",function(Cal_json){		    
+			jQuery('#line1').html(Cal_json.begin_year+"-"+Cal_json.end_year+Cal_json.season);
+			jQuery('#line2').html("第"+Cal_json.zhou_num+"周");
+			jQuery('#line3').html(Cal_json.date);
+			jQuery('#line4').html(Cal_json.week);			
+		});
+	});
+  </script>
+  <div id="banner">
+    <div>
+     <a href="http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&amp;itemSeq=31564">
+      http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq;=31564
+     </a>
+    </div>
+   <img id="img_change" src="http://yjsy.cic.tsinghua.edu.cn/docinfo/img/banner.jpg" width="947" height="103" />
+
+  </div>
+  <div id="weather">
+   <ul>
+    <li id="line1">
+    </li>
+    <li class="red" id="line2">
+    </li>
+    <li id="line3">
+    </li>
+    <li id="line4">
+    </li>
+   </ul>
+  </div>
+  <div id="search">
+   <ul>
+    <li>
+     <input id="searchValue" type="text" size="40" value="请输入您要查找的关键字..." style="vertical-align:middle;" onfocus="searchFocus(this)" onblur="searchBlur(this)" />
+     &nbsp;
+     <input type="image" style="vertical-align:middle;" onclick="search()" src="/docinfo/img/button_search.gif" width="82" height="21" />
+    </li>
+   </ul>
+  </div>
+  <div id="center">
+   <!-- 导航部分 -->
+   <div id="nav2">
+    <ul>
+     <li>
+      <span>
+       当前位置:
+      </span>
+     </li>
+     <li>
+      &gt;&gt;
+      <a href="../index.jsp">
+       首页
+      </a>
+     </li>
+     <li>
+      &gt;&gt;
+      <a href="/docinfo/board1/boardlist.jsp?columnId=0010106&amp;parentColumnId=001">
+       教务通知
+      </a>
+     </li>
+    </ul>
+   </div>
+   <!-- 导航部分结束 -->
+   <h3>
+    <span>
+     <font color="">
+      电子工程系海外学者短期讲学课程：CMOS工艺前沿技术与应用概论
+     </font>
+    </span>
+   </h3>
+   <div style="width:90%; margin:10px auto; padding-bottom:10px; border-bottom:#dcdcdc 1px solid; overflow:hidden; ">
+    <ul>
+     <li>
+      <span class="left" style="padding-top:30px;">
+       发布时间:2017-11-23
+            	     &nbsp;&nbsp;
+            	     访问计数:643
+      </span>
+     </li>
+     <li>
+      <span class="left">
+      </span>
+     </li>
+     <li>
+      <a href="javascript:window.close()">
+       <span class="right">
+        [关闭窗口]
+       </span>
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div style="text-align:left; width:90%; magin:0px auto; padding-top:20px;  padding-bottom:20px;word-break:break-all;">
+    <span>
+     <div align="center">
+      <b>
+       电子工程系
+       <a name="OLE_LINK11">
+        海外学者短期讲学课程通知
+       </a>
+      </b>
+     </div>
+     <div>
+      <b>
+       课程名称：
+      </b>
+      CMOS工艺前沿技术与应用概论（Overview of the frontiers of CMOS Technology and Applications）
+      <a name="OLE_LINK6">
+      </a>
+      <a name="OLE_LINK5">
+      </a>
+     </div>
+     <div>
+      <b>
+       授课人：
+      </b>
+      Jan Van
+      <a name="OLE_LINK8">
+      </a>
+      <a name="OLE_LINK7">
+      </a>
+      der Spiegel教授，美国宾夕法尼亚大学
+     </div>
+     <div>
+      <b>
+       课程负责人：
+      </b>
+      张沕琳（电子系）
+     </div>
+     <div>
+      <b>
+       授课语言：
+      </b>
+      英文
+     </div>
+     <div>
+      <b>
+       考核方式：
+      </b>
+      考查
+     </div>
+     <div>
+      <b>
+       学时：
+      </b>
+      16
+     </div>
+     <div>
+      <b>
+       学分：
+      </b>
+      1
+     </div>
+     <div>
+      <b>
+       课容量：
+      </b>
+      25人
+     </div>
+     <div>
+      <b>
+       上课时间：
+      </b>
+      12月5日-12月28日（第12~15周） 每周二晚7：20~8：55、每周四晚7：20~8：55（第6大节）
+     </div>
+     <div>
+      <b>
+       上课地点
+      </b>
+      <b>
+       ：
+      </b>
+      罗姆楼8-206
+     </div>
+     <div>
+      <b>
+       授课对象：
+      </b>
+      研究生、
+      <a name="OLE_LINK2">
+      </a>
+      <a name="OLE_LINK1">
+       高年级本科生
+      </a>
+     </div>
+     <div>
+      <b>
+       选课方式：
+      </b>
+      <b>
+      </b>
+     </div>
+     <div>
+      <a name="OLE_LINK4">
+      </a>
+      <a name="OLE_LINK3">
+       手动选课，即日起接受报名。请准备选课的同学在12月3日之前将“学号”“姓名”“所在院系”“联系方式（手机、邮箱）”等信息发送至sw17@mails.tsinghua.edu.cn报名，邮件主题请注明“选课申请”。
+      </a>
+     </div>
+     <div>
+      <b>
+       课程简介：
+      </b>
+      <b>
+      </b>
+     </div>
+     <div>
+      本课程将介绍CMOS集成电路领域的前沿方向，并进行有针对性的讨论。授课教师Jan Van der Spiegel教授是宾夕法尼亚大学教授、IEEE固态电路学会主席、我校高级访问学者。其对于整个领域有着深刻的理解，能够深入浅出地带领学生体会集成电路的前沿科技水平。
+     </div>
+     <div>
+      This course provides an introduction to frontiers of CMOS technology. The lecturer of this course, Dr. Van der Spiegel is a full professor of University of Pennsylvania, President of IEEE Solid-State Circuit Society. His experience in the CMOS development and state-of-the-art technology will greatly help students to establish a good understanding of this area.
+     </div>
+     <div>
+      <b>
+       教学大纲
+      </b>
+     </div>
+    </span>
+    <p>
+     <table cellspacing="0" cellpadding="0" border="1">
+      <tbody>
+       <tr>
+        <td valign="top" width="104">
+         <div align="center">
+          课时
+         </div>
+        </td>
+        <td valign="top" width="497">
+         <div align="center">
+          内容
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td valign="top" width="104">
+         <div align="center">
+          1-2
+         </div>
+        </td>
+        <td valign="top" width="497">
+         <div>
+          <b>
+           Semiconductor Industry Landscape
+          </b>
+          : The first lecture will give a broad overview of the Integrated Circuit Industry, including regional and global markets, challenges and opportunities in China. The second lecture will discuss the history of integrated circuits and its impact on computing power and emerging applications.
+         </div>
+         <div>
+          &nbsp;
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td valign="top" width="104">
+         <div align="center">
+          3-4
+         </div>
+        </td>
+        <td valign="top" width="497">
+         <div>
+          <b>
+           From Micro meets Nano (Moore's Law, Scaling
+          </b>
+          : This lecture starts with a discussion the importance of Moore’s law as a driver of the IC industry. Device and technology limitations will be discussed next including an introduction of future devices.
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td valign="top" width="104">
+         <div align="center">
+          5-6
+         </div>
+        </td>
+        <td valign="top" width="497">
+         <div>
+          <b>
+           Semiconductors and Semiconductor Devices
+          </b>
+          : Starting with an overview of key properties of semiconductors, we will explain the operation of transistors and other semiconductor devices such as photodiodes, solar cells, LEDs,…
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td valign="top" width="104">
+         <div align="center">
+          7-8
+         </div>
+        </td>
+        <td valign="top" width="497">
+         <div>
+          B
+          <b>
+           asics of Solid-State Image Sensors
+          </b>
+          : Operation and properties of image sensors including CCD and active pixel-sensors.
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td valign="top" width="104">
+         <div align="center">
+          9-10
+         </div>
+        </td>
+        <td valign="top" width="497">
+         <div>
+          <b>
+           Bio-inspired imagers
+          </b>
+          : These lectures will focus on bio-inspired image sensors as a way to either improve the performance or develop smart sensors. Emphasis is given on polarization imaging
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td valign="top" width="104">
+         <div align="center">
+          11-12
+         </div>
+        </td>
+        <td valign="top" width="497">
+         <div>
+          <b>
+           Brain-Machine Interfaces:
+          </b>
+          We will discuss the various type of BMI’s with emphasis on closed-loop, bidirectional systems for the restoration of sensory information.
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td valign="top" width="104">
+         <div align="center">
+          13-14
+         </div>
+        </td>
+        <td valign="top" width="497">
+         <div>
+          <b>
+           Micro and nanofabrication technologies
+          </b>
+          : discussion of the various steps involved in the manufacturing process of semiconductor devices.
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td valign="top" width="104">
+         <div align="center">
+          15-16
+         </div>
+        </td>
+        <td valign="top" width="497">
+         <div>
+          课堂讨论
+         </div>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </p>
+    <div>
+     &nbsp;
+    </div>
+    <div>
+     <b>
+      预备知识或先修课程要求
+     </b>
+    </div>
+    <div>
+     对CMOS集成电路的基本了解
+    </div>
+    <div>
+     <b>
+      授课教师简介:
+     </b>
+    </div>
+    <div>
+     <a name="OLE_LINK10">
+     </a>
+     <a name="OLE_LINK9">
+      Jan Van der Spiegel
+     </a>
+     教授是宾夕法尼亚大学电气与系统工程系教授、前任系主任（1998年到2004年）、工程与应用科学学院副院长（2011年到2016年）、IEEE SSCS (国际电气与电子工程师学会固态电路协会)主席、IEEE终身会士。
+    </div>
+    <div>
+     Jan Van der Spiegel is a Professor of the Electrical and Systems Engineering Department, and Associate Dean for Professional Programs of the School of Engineering and Applied Science at the University of Pennsylvania. He is the former chair of the Electrical Engineerig and interim chair of the Electrical and Systems Engineering Departments. Dr. Van der Spiegel received his Masters degree in Electro-Mechanical Engineering and his Ph.D. degree in Electrical Engineering from the University of Leuven, Belgium. His primary research interests are in mixed-mode VLSI design, CMOS vision sensors for polarization imaging, biologically based image sensors and sensory information processing systems, low-power brain-machine-interfaces, and micro-sensor technolog. He is the author of over 180 journal and conference papers and holds 4 patents.
+    </div>
+    <div>
+     &nbsp;
+    </div>
+    <div>
+     He is a Life Fellow of the IEEE and recepient of the 2007 EAB Major Educational Innovation Award. He received the IEEE Third Millennium Medal, the UPS Foundation Distinguished Education Chair and the Bicentennial Class of 1940 Term Chair. He was aswarded the Christian and Mary Lindback Foundation, and the S. Reid Warren Award for Distinguished Teaching, and the Presidential Young Investigator Award.
+    </div>
+    <div>
+     &nbsp;
+    </div>
+    <div>
+     He has served on several IEEE program committees (IEDM, ICCD, ISCAS and ISSCC) and was the technical program chair of the 2007 International Solid-State Circuit Conference (ISSCC 2007). He is an associate editor of the IEEE Transactions on Biomedical Circuits and Systems (TBCAS), and is on the Editorial Board of the Proceedings of the IEEE and Sensors and Actuatorss A. He is a member of the IEEE Solid-State Circuits Society where he served as the chapters Chairs coordinator. He is the 2016-2017 President of the IEEE Solid-State Circuits Society. He is also a member of Phi Beta Delta and Tau Beta Pi.
+    </div>
+    <div align="right">
+     &nbsp;
+    </div>
+    <div align="right">
+     电子系
+    </div>
+    <div align="right">
+     2017.11.23
+    </div>
+    <div>
+     &nbsp;
+    </div>
+   </div>
+   <!-- &lt;div class="clear" style="magin:20px auto;"&gt;&nbsp;&lt;/div&gt; -->
+   <div style="width:90%; margin:20px auto; padding-top:10px; border-top:#dcdcdc 1px solid">
+   </div>
+  </div>
+  <div id="footer_s">
+   <!-- 底部区域开始 -->
+   <p>
+    版权所有:清华大学研究生院&nbsp;&nbsp;&nbsp;&nbsp;技术支持:清华大学信息化技术中心
+   </p>
+   <p style="font-family:Arial;">
+    Copyright&nbsp;&nbsp;
+    <span style="font-size:16px;">
+     &copy;
+    </span>
+    &nbsp;&nbsp;2009 Tsinghua University All Rights Reserved.
+   </p>
+  </div>
+  <!-- 底部区域结束 -->
+ </body>
+</html>

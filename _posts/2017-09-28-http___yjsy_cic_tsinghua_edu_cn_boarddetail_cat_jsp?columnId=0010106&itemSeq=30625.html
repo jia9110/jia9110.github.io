@@ -1,0 +1,737 @@
+---
+layout:      post
+title:       土木工程系海外学者短期讲学课程：交通数据的统计模型分析
+excerpt:     <a href=http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq=30625>http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq=30625</a>
+tags:
+  models
+  chapter
+  and
+  analysis
+  交通
+modify_date: 2017-09-28
+---
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+   研究生院办公网内网
+  </title>
+  <link href="/docinfo/css/page.css" rel="stylesheet" type="text/css" />
+ </head>
+ <script language="javascript">
+  &lt;!--
+function commentCheck(){
+	if(document.forms(0).content.value==""){
+		alert("评论内容不能为空!");
+		document.forms(0).content.focus();
+		return false;
+	}
+	if(document.forms(0).anonymous.value=="1"&amp;&amp;
+	document.forms(0).nickName.value==""){
+		document.forms(0).nickName.value="匿名";
+	}
+	return true;
+}
+--&gt;
+ </script>
+ <!-- 得到请求参数 -->
+ <!-- 得到infoColumnVo -->
+ <!-- 得到参数VO -->
+ <!-- 文档计数+1 -->
+ <body>
+  <script type="text/javascript" src="/js/jquery-1[1].3.2.min.js">
+  </script>
+  <script type="text/javascript" src="/js/jxrl-1.0.js">
+  </script>
+  <script type="text/JavaScript">
+   &lt;!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i&lt;a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&amp;&amp;i&lt;a.length&amp;&amp;(x=a[i])&amp;&amp;x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))&gt;0&amp;&amp;parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&amp;&amp;d.all) x=d.all[n]; for (i=0;!x&amp;&amp;i&lt;d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&amp;&amp;d.layers&amp;&amp;i&lt;d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x &amp;&amp; d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i&lt;(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//--&gt;
+  </script>
+  <script type="text/javascript">
+   function search(){
+		var searchValue = document.getElementById('searchValue').value.replace(/^\s+|\s+$/g,"");;
+		if(searchValue == '请输入您要查找的关键字...')searchValue = '';
+		if(searchValue == ''){
+          alert("请输入您要查找的关键字");         
+          document.getElementById('searchValue').focus(); 
+        }else{  
+		  var str = "/docinfo/search.jsp?searchTitle=" + escape(searchValue);
+		  window.open(str);
+		  //window.location.href(str);
+		}		
+}
+
+function searchFocus(text){
+		text.value = '';
+}
+	
+function searchBlur(text){
+		if(text.value == '')
+			text.value = '请输入您要查找的关键字...';
+}
+  </script>
+  <script>
+   $(document).ready(function(){	  
+		getCal_json("/portal/proxy/tsxx",function(Cal_json){		    
+			jQuery('#line1').html(Cal_json.begin_year+"-"+Cal_json.end_year+Cal_json.season);
+			jQuery('#line2').html("第"+Cal_json.zhou_num+"周");
+			jQuery('#line3').html(Cal_json.date);
+			jQuery('#line4').html(Cal_json.week);			
+		});
+	});
+  </script>
+  <div id="banner">
+    <div>
+     <a href="http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&amp;itemSeq=30625">
+      http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq;=30625
+     </a>
+    </div>
+   <img id="img_change" src="http://yjsy.cic.tsinghua.edu.cn/docinfo/img/banner.jpg" width="947" height="103" />
+
+  </div>
+  <div id="weather">
+   <ul>
+    <li id="line1">
+    </li>
+    <li class="red" id="line2">
+    </li>
+    <li id="line3">
+    </li>
+    <li id="line4">
+    </li>
+   </ul>
+  </div>
+  <div id="search">
+   <ul>
+    <li>
+     <input id="searchValue" type="text" size="40" value="请输入您要查找的关键字..." style="vertical-align:middle;" onfocus="searchFocus(this)" onblur="searchBlur(this)" />
+     &nbsp;
+     <input type="image" style="vertical-align:middle;" onclick="search()" src="/docinfo/img/button_search.gif" width="82" height="21" />
+    </li>
+   </ul>
+  </div>
+  <div id="center">
+   <!-- 导航部分 -->
+   <div id="nav2">
+    <ul>
+     <li>
+      <span>
+       当前位置:
+      </span>
+     </li>
+     <li>
+      &gt;&gt;
+      <a href="../index.jsp">
+       首页
+      </a>
+     </li>
+     <li>
+      &gt;&gt;
+      <a href="/docinfo/board1/boardlist.jsp?columnId=0010106&amp;parentColumnId=001">
+       教务通知
+      </a>
+     </li>
+    </ul>
+   </div>
+   <!-- 导航部分结束 -->
+   <h3>
+    <span>
+     <font color="">
+      土木工程系海外学者短期讲学课程：交通数据的统计模型分析
+     </font>
+    </span>
+   </h3>
+   <div style="width:90%; margin:10px auto; padding-bottom:10px; border-bottom:#dcdcdc 1px solid; overflow:hidden; ">
+    <ul>
+     <li>
+      <span class="left" style="padding-top:30px;">
+       发布时间:2017-09-28
+            	     &nbsp;&nbsp;
+            	     访问计数:764
+      </span>
+     </li>
+     <li>
+      <span class="left">
+      </span>
+     </li>
+     <li>
+      <a href="javascript:window.close()">
+       <span class="right">
+        [关闭窗口]
+       </span>
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div style="text-align:left; width:90%; magin:0px auto; padding-top:20px;  padding-bottom:20px;word-break:break-all;">
+    <span>
+     <div>
+      土木工程系海外学者短期讲学课程：交通数据的统计模型分析
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【课程名称】Transportation Statistical Modeling（交通数据的统计模型分析）
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【课程编号】Y0030331
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【授课对象】研究生及高年级本科生
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【授课语言】中文授课，英文教材
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【上课时间】2017年10月9日（周一）晚上7:20-9:35；10月11日（周三）晚上7:20-9:35；10月14日（周六）上午8:30-12:00；10月15日（周日）上午8:30-12:00
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【上课地点】新土木馆（何善衡楼）300教室
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【考核方式】考查，1学分
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【报名方式】手动选课，即日起接受报名。请准备选课的同学在2017年10月6日之前将“学号”“姓名”“所在院系”“联系方式（手机）”信息发送至604612083@qq.com 报名，邮件请注明“选课申请”。
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【课程简介】
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      This course will introduce a number of econometric models that are important to transportation data analysis. The application of such models ranges from traffic safety analysis to travel demand modeling and policy evaluation. Students will learn to specify the models based on data characteristics and model properties. They will also learn to estimate these models using appropriate techniques. &nbsp;Equally importantly is that students will learn to interpret the analysis results in a rigorous and meaningful way. This course provides an opportunity to develop the skills of studying transportation issues through statistical data analysis and to gain hands-on experience with statistical analysis software. The course will emphasize application, but the underlying theory and limitations will also be discussed to ensure that the methods are fully understood, properly applied and potentially enhanced.
+     </div>
+     <div>
+      Prerequisites for the course include basic linear algebra, matrix analysis and probability and statistics. Therefore, students will be expected to understand the basic concepts of statistical distributions, hypothesis testing, graphical methods, matrix manipulation, etc. upon entering the course.
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      本课程适于土木工程系、自动化系、汽车工程系、工业工程系相关专业研究生来选。
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【教学大纲】
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div align="center">
+      <b>
+       Tentative Schedule
+      </b>
+     </div>
+     <div align="center">
+      <table cellspacing="0" cellpadding="0" border="1">
+       <tbody>
+        <tr>
+         <td valign="top" width="70">
+          <div align="center">
+           <b>
+            Time
+           </b>
+          </div>
+         </td>
+         <td width="273">
+          <div align="center">
+           <b>
+            Topic
+           </b>
+          </div>
+         </td>
+         <td width="114">
+          <div align="center">
+           <b>
+            Reading
+           </b>
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div align="center">
+           <b>
+            Assignment
+           </b>
+          </div>
+          <div align="center">
+           <b>
+            Due
+           </b>
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           1
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Statistical Inference
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapters 1-2
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           &nbsp;
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           2
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Linear Regression Analysis (1)
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 3
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           &nbsp;
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           3
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Linear Regression Analysis (2)
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 3
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           &nbsp;
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           4
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Specification Errors
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 4
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           &nbsp;
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           5
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Simultaneous Equations Models
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 5
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           &nbsp;
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           6
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Duration Models (1)
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 10
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           HW1 due
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           7
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Duration Models (2)
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 10
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           &nbsp;
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           8
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Count Data Models (1)
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 11
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           HW2 due
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           9
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Count Data Models (2)
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 11
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           &nbsp;
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           10
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Discrete Outcome Models (1)
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 13
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           &nbsp;
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           11
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Discrete Outcome Models (2)
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 13
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           &nbsp;
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           12
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Discrete Outcome Models (3)
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 13
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           HW3 due
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           13
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Ordered Probability Models
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 14
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           &nbsp;
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           1
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Discrete/Continuous Models
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 15
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           &nbsp;
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           15
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Random Parameter Models
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Chapter 16
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           &nbsp;
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" width="70">
+          <div>
+           16
+          </div>
+         </td>
+         <td width="273">
+          <div>
+           Bayesian Approach and Review
+          </div>
+         </td>
+         <td width="114">
+          <div>
+           Handout
+          </div>
+         </td>
+         <td valign="top" width="114">
+          <div>
+           HW4 due
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div>
+      <b>
+      </b>
+      &nbsp;
+     </div>
+     <div>
+      This outline will be constantly updated based on our progress and your feedback.
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      主要教材： Washington, S., M. Karlaftis, and F. Mannering (2011) Statistical and econometric methods for transportation data analysis, Second Edition, Chapman &amp; Hall/CRC, Boca Raton, FL
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【授课教师简介】
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      Dr. Xiaokun (Cara Wang), P.E., Ph.D. &nbsp;&nbsp;Office: E-mail:
+      <a href="mailto:wangxiaokun@gmail.com">
+       wangxiaokun@gmail.com
+      </a>
+     </div>
+     <div>
+      王晓坤教授在国际高水平期刊和会议共发表论文六十篇，并主持多项国家及纽约州资助的研究项目。曾获得第六届本杰明斯蒂文斯美国区域科学奖学金，CUTC交通科技优秀博士论文奖，交通研究会（TRB）统计方法委员会(ABJ80)最佳青年学者论文。目前担任TRB-ABJ70（人工智能与高级计算应用）、TRB-AT025（城市货运交通）以及TRB-AT015（货运交通规划与物流）的委员会成员，同时也是海外华人交通协会（COTA）学术委员会主席。现任Network and Spatial Economics和ASCE Journal of Urban Planning and Development编委会成员，并为Transportation Research Part A和Part D特刊编委。因其研究内容和学术影响，曾接受过纽约时报、华尔街日报和CCTV美国频道的采访。
+     </div>
+     <div align="right">
+      &nbsp;
+     </div>
+     <div align="right">
+      土木工程系
+     </div>
+     <div align="right">
+      &nbsp;
+     </div>
+     <div align="right">
+      2017.9.28
+     </div>
+    </span>
+   </div>
+   <!-- &lt;div class="clear" style="magin:20px auto;"&gt;&nbsp;&lt;/div&gt; -->
+   <div style="width:90%; margin:20px auto; padding-top:10px; border-top:#dcdcdc 1px solid">
+   </div>
+  </div>
+  <div id="footer_s">
+   <!-- 底部区域开始 -->
+   <p>
+    版权所有:清华大学研究生院&nbsp;&nbsp;&nbsp;&nbsp;技术支持:清华大学信息化技术中心
+   </p>
+   <p style="font-family:Arial;">
+    Copyright&nbsp;&nbsp;
+    <span style="font-size:16px;">
+     &copy;
+    </span>
+    &nbsp;&nbsp;2009 Tsinghua University All Rights Reserved.
+   </p>
+  </div>
+  <!-- 底部区域结束 -->
+ </body>
+</html>

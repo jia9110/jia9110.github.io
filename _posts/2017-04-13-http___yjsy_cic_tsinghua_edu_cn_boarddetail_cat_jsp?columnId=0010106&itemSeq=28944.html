@@ -1,0 +1,388 @@
+---
+layout:      post
+title:       电子系海外学者短期讲学课程--电磁逆问题的前沿与挑战
+excerpt:     <a href=http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq=28944>http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq=28944</a>
+tags:
+  the
+  of
+  and
+  inverse
+  in
+modify_date: 2017-04-13
+---
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+   研究生院办公网内网
+  </title>
+  <link href="/docinfo/css/page.css" rel="stylesheet" type="text/css" />
+ </head>
+ <script language="javascript">
+  &lt;!--
+function commentCheck(){
+	if(document.forms(0).content.value==""){
+		alert("评论内容不能为空!");
+		document.forms(0).content.focus();
+		return false;
+	}
+	if(document.forms(0).anonymous.value=="1"&amp;&amp;
+	document.forms(0).nickName.value==""){
+		document.forms(0).nickName.value="匿名";
+	}
+	return true;
+}
+--&gt;
+ </script>
+ <!-- 得到请求参数 -->
+ <!-- 得到infoColumnVo -->
+ <!-- 得到参数VO -->
+ <!-- 文档计数+1 -->
+ <body>
+  <script type="text/javascript" src="/js/jquery-1[1].3.2.min.js">
+  </script>
+  <script type="text/javascript" src="/js/jxrl-1.0.js">
+  </script>
+  <script type="text/JavaScript">
+   &lt;!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i&lt;a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&amp;&amp;i&lt;a.length&amp;&amp;(x=a[i])&amp;&amp;x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))&gt;0&amp;&amp;parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&amp;&amp;d.all) x=d.all[n]; for (i=0;!x&amp;&amp;i&lt;d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&amp;&amp;d.layers&amp;&amp;i&lt;d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x &amp;&amp; d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i&lt;(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//--&gt;
+  </script>
+  <script type="text/javascript">
+   function search(){
+		var searchValue = document.getElementById('searchValue').value.replace(/^\s+|\s+$/g,"");;
+		if(searchValue == '请输入您要查找的关键字...')searchValue = '';
+		if(searchValue == ''){
+          alert("请输入您要查找的关键字");         
+          document.getElementById('searchValue').focus(); 
+        }else{  
+		  var str = "/docinfo/search.jsp?searchTitle=" + escape(searchValue);
+		  window.open(str);
+		  //window.location.href(str);
+		}		
+}
+
+function searchFocus(text){
+		text.value = '';
+}
+	
+function searchBlur(text){
+		if(text.value == '')
+			text.value = '请输入您要查找的关键字...';
+}
+  </script>
+  <script>
+   $(document).ready(function(){	  
+		getCal_json("/portal/proxy/tsxx",function(Cal_json){		    
+			jQuery('#line1').html(Cal_json.begin_year+"-"+Cal_json.end_year+Cal_json.season);
+			jQuery('#line2').html("第"+Cal_json.zhou_num+"周");
+			jQuery('#line3').html(Cal_json.date);
+			jQuery('#line4').html(Cal_json.week);			
+		});
+	});
+  </script>
+  <div id="banner">
+    <div>
+     <a href="http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&amp;itemSeq=28944">
+      http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq;=28944
+     </a>
+    </div>
+   <img id="img_change" src="http://yjsy.cic.tsinghua.edu.cn/docinfo/img/banner.jpg" width="947" height="103" />
+
+  </div>
+  <div id="weather">
+   <ul>
+    <li id="line1">
+    </li>
+    <li class="red" id="line2">
+    </li>
+    <li id="line3">
+    </li>
+    <li id="line4">
+    </li>
+   </ul>
+  </div>
+  <div id="search">
+   <ul>
+    <li>
+     <input id="searchValue" type="text" size="40" value="请输入您要查找的关键字..." style="vertical-align:middle;" onfocus="searchFocus(this)" onblur="searchBlur(this)" />
+     &nbsp;
+     <input type="image" style="vertical-align:middle;" onclick="search()" src="/docinfo/img/button_search.gif" width="82" height="21" />
+    </li>
+   </ul>
+  </div>
+  <div id="center">
+   <!-- 导航部分 -->
+   <div id="nav2">
+    <ul>
+     <li>
+      <span>
+       当前位置:
+      </span>
+     </li>
+     <li>
+      &gt;&gt;
+      <a href="../index.jsp">
+       首页
+      </a>
+     </li>
+     <li>
+      &gt;&gt;
+      <a href="/docinfo/board1/boardlist.jsp?columnId=0010106&amp;parentColumnId=001">
+       教务通知
+      </a>
+     </li>
+    </ul>
+   </div>
+   <!-- 导航部分结束 -->
+   <h3>
+    <span>
+     <font color="">
+      电子系海外学者短期讲学课程--电磁逆问题的前沿与挑战
+     </font>
+    </span>
+   </h3>
+   <div style="width:90%; margin:10px auto; padding-bottom:10px; border-bottom:#dcdcdc 1px solid; overflow:hidden; ">
+    <ul>
+     <li>
+      <span class="left" style="padding-top:30px;">
+       发布时间:2017-04-13
+            	     &nbsp;&nbsp;
+            	     访问计数:486
+      </span>
+     </li>
+     <li>
+      <span class="left">
+      </span>
+     </li>
+     <li>
+      <a href="javascript:window.close()">
+       <span class="right">
+        [关闭窗口]
+       </span>
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div style="text-align:left; width:90%; magin:0px auto; padding-top:20px;  padding-bottom:20px;word-break:break-all;">
+    <span>
+     <div>
+      <b>
+       海外学者短期讲学课程报名通知
+      </b>
+      <b>
+      </b>
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【课程名称】：电磁逆问题的前沿与挑战
+     </div>
+     <div>
+      Inverse Problems in Electromagnetics - Challenges and New Frontiers
+     </div>
+     <div>
+      【课程号】：Y0230471
+     </div>
+     <div>
+      【学时】：16学时
+     </div>
+     <div>
+      【学分】：1学分
+     </div>
+     <div>
+      【授课语言】：英语
+     </div>
+     <div>
+      【上课日期】：2017年4月25-27日 （星期二至四）
+     </div>
+     <div>
+      【上课时间】：9:50 – 12:00 (2h)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13:30 - 15:00 (1.5h)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15:10 - 17:10 (2h)
+     </div>
+     <div>
+      【上课地点】：待定
+     </div>
+     <div>
+      【考核方式】：考查
+     </div>
+     <div>
+      【授课对象】：研究生
+     </div>
+     <div>
+      【课容量】：30人
+     </div>
+     <div>
+      【主讲教师】：Prof.
+      <b>
+       Andrea Massa
+      </b>
+      &amp; Prof.
+      <b>
+       Paolo Rocca
+      </b>
+      (University of Trento-意大利)
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【个人简历】：
+     </div>
+     <div>
+      <b>
+       Andrea Massa
+      </b>
+      (IET Fellow, Electromagnetic Academy Fellow, IEEE Senior Member) received the “laurea” degree in Electronic Engineering from the University of Genoa, Genoa, Italy, in 1992 and Ph.D. degree in EECS from the same university in 1996. From 1997 to 1999, he was an Assistant Professor of Electromagnetic Fields at the Department of Biophysical and Electronic Engineering (University of Genoa). From 2001 to 2004, he was an Associate Professor at the University of Trento. Since 2005, he has been a Full Professor of Electromagnetic Fields at the University of Trento, where he currently teaches electromagnetic fields, inverse scattering techniques, antennas and wireless communications, wireless services and devices, and optimization techniques. At present, Prof. Massa is the director of the ELEDIA Research Center. Recently, he has been appointed IEEE AP‐S Distinguished Lecturer (2016‐2018). Prof. Massa serves as Associate Editor for several academic journals including the “IEEE Transaction on Antennas and Propagation” and “International Journal of Microwave and Wireless Technologies”.
+     </div>
+     <div>
+      His research activities are mainly concerned with inverse problems, analysis/synthesis of antenna systems and large arrays, radar systems synthesis and signal processing, cross‐layer optimization and planning of wireless/RF systems, semantic wireless technologies, system‐by‐design and material‐by‐design, and theory/applications of optimization techniques to engineering problems. Prof. Massa published more than 600 scientific publications and organized more than 50 scientific sessions in international conferences.
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      <b>
+       Paolo Rocca
+      </b>
+      (IEEE Senior Member) received the MS degree in Telecommunications Engineering from the University of Trento in 2005 (summa cum laude) and the PhD Degree in Information and Communication Technologies from the same University in 2008. He is currently Associate Professor at the Department of Information Engineering and Computer Science (University of Trento) and a member of the ELEDIA Research Center. Prof. Rocca is the author/co-author of over 260 peer reviewed papers on international journals and conferences. Prof. Rocca has been a visiting Ph.D. student at the Pennsylvania State University (U.S.A.), at the University Mediterranea of Reggio Calabria (Italy), and a visiting researcher at the Laboratoire des Signaux et Systèmes (L2S@ Supèlec, France) in 2012 and 2013. Moreover, he has been an Invited Associate Professor at the University of Paris Sud (France) in 2015. Prof. Rocca has been awarded from the IEEE Geoscience and Remote Sensing Society and the Italy Section with the best PhD thesis award IEEE-GRS Central Italy Chapter. His main interests are in the framework of antenna array synthesis and design, electromagnetic inverse scattering, and optimization techniques for electromagnetics. He serves as an Associate Editor of the IEEE Antennas and Wireless Propagation Letters.
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【预备知识】：《电磁场与波》，《数据与算法》。
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【课程简介】：
+     </div>
+     <div>
+      Inverse problems arise when formulating and addressing many synthesis and sensing applications in modern electromagnetic engineering. Indeed, the objective of microwave imaging, antenna design, and radar remote sensing can be seen as that of retrieving a physical quantity (the dielectric profile of a device under test, the shape of the radiating system, the reflectivity of an area) starting from (either measured or “desired”) electromagnetic field data. Nevertheless, the solution of the well‐known theoretical features (including ill‐posedness, non‐uniqueness, ill‐conditioning, etc.) of electromagnetic inverse problems still represents a major challenge from the practical viewpoint. Indeed, developing and implementing robust, fast, effective, and general‐purpose techniques able to solve arbitrary electromagnetic inverse problem still represent a holy grail from the academic and industrial viewpoint. Accordingly, several ad‐hoc solutions (i.e., effective only for specific application domains) have been developed in the recent years. In this framework, one of the most important research frontiers is the development of inversion techniques which enable the exploitation of both the information coming from the electromagnetic data and of that which is provided by prior knowledge of the scenario, application, or device of interest. Indeed, exploiting a‐priori information to regularize the problem formulation is known to be a key asset to reduce the drawbacks of inversion processes (i.e., the its ill‐posedness). However, properly introducing prior knowledge within an inversion technique is an extremely complex task, and suitable solutions are available only for specific classes of scenarios (e.g., comprising sparseness regularization terms).
+     </div>
+     <div>
+      The aim of this short course is to provide a broad review of the current trends and objectives in the development of innovative inversion methodologies and algorithms, with main focus on inverse scattering/microwave imaging problems. Towards this end, after a review of the literature on the topic, different classes of methodologies aimed at combining prior and acquired information (possibly in an iterative fashion) will be discussed, and guidelines on how to apply the arising strategies to different domains will be provided, along with numerical/experimental results. The open challenges and future trends of the research in this area will be discussed as well.
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【课程大纲】：
+     </div>
+     <div>
+      1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Introduction to Inverse Problems (IP)
+     </div>
+     <div>
+      1.1.&nbsp;&nbsp;&nbsp; Definition and Fundamentals of IP
+     </div>
+     <div>
+      1.2.&nbsp;&nbsp;&nbsp; IP Solution as a Two-Step Process: Estimation and Appraisal
+     </div>
+     <div>
+      2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inverse Scattering (IS) Problems as Example of IP in Electromagnetics
+     </div>
+     <div>
+      2.1.&nbsp;&nbsp;&nbsp; Formulation
+     </div>
+     <div>
+      2.2.&nbsp;&nbsp;&nbsp; Discretization
+     </div>
+     <div>
+      3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mathematical Issues of Inverse Problems
+     </div>
+     <div>
+      3.1.&nbsp;&nbsp;&nbsp; Features of IP and IS Problems
+     </div>
+     <div>
+      3.2.&nbsp;&nbsp;&nbsp; Non-linearity
+     </div>
+     <div>
+      3.3.&nbsp;&nbsp;&nbsp; Ill-posedness
+     </div>
+     <div>
+      3.4.&nbsp;&nbsp;&nbsp; Dealing with Non-linearity and Ill-posedness
+     </div>
+     <div>
+      4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Classical Regularization Techniques
+     </div>
+     <div>
+      4.1.&nbsp;&nbsp;&nbsp; Tikhonov Regularization
+     </div>
+     <div>
+      4.2.&nbsp;&nbsp;&nbsp; Truncated Singular Value Decomposition
+     </div>
+     <div>
+      5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Regularization through Optimization
+     </div>
+     <div>
+      5.1.&nbsp;&nbsp;&nbsp; Deterministic vs. Stochastic Strategies
+     </div>
+     <div>
+      5.2.&nbsp;&nbsp;&nbsp; Stochastic Strategies: Theory
+     </div>
+     <div>
+      5.3.&nbsp;&nbsp;&nbsp; Solving Inverse Scattering Problems by means of Global Optimization
+     </div>
+     <div>
+      6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Novel Regularization Techniques: Compressive Sensing
+     </div>
+     <div>
+      7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conclusions, Remarks, and Future Trends
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【报名联系人】：王老师（jing_wang@mail.tsinghua.edu.cn）
+     </div>
+     <div align="left">
+      【报名截止时间】：2017年4月24日（星期一）下午5点。邮件报名即可，需要提供学号、姓名、院系信息学生身份（博/硕/本）、常用邮箱、手机号码。
+     </div>
+     <div>
+      &nbsp;
+     </div>
+    </span>
+   </div>
+   <!-- &lt;div class="clear" style="magin:20px auto;"&gt;&nbsp;&lt;/div&gt; -->
+   <div style="width:90%; margin:20px auto; padding-top:10px; border-top:#dcdcdc 1px solid">
+   </div>
+  </div>
+  <div id="footer_s">
+   <!-- 底部区域开始 -->
+   <p>
+    版权所有:清华大学研究生院&nbsp;&nbsp;&nbsp;&nbsp;技术支持:清华大学信息化技术中心
+   </p>
+   <p style="font-family:Arial;">
+    Copyright&nbsp;&nbsp;
+    <span style="font-size:16px;">
+     &copy;
+    </span>
+    &nbsp;&nbsp;2009 Tsinghua University All Rights Reserved.
+   </p>
+  </div>
+  <!-- 底部区域结束 -->
+ </body>
+</html>

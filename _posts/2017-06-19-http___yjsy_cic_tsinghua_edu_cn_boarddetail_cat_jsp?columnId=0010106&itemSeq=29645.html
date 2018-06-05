@@ -1,0 +1,396 @@
+---
+layout:      post
+title:       微纳电子系海外学者短期讲学课程--模拟集成电路设计前沿与挑战
+excerpt:     <a href=http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq=29645>http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq=29645</a>
+tags:
+  adc
+  and
+  模拟
+  analog
+  he
+modify_date: 2017-06-19
+---
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+   研究生院办公网内网
+  </title>
+  <link href="/docinfo/css/page.css" rel="stylesheet" type="text/css" />
+ </head>
+ <script language="javascript">
+  &lt;!--
+function commentCheck(){
+	if(document.forms(0).content.value==""){
+		alert("评论内容不能为空!");
+		document.forms(0).content.focus();
+		return false;
+	}
+	if(document.forms(0).anonymous.value=="1"&amp;&amp;
+	document.forms(0).nickName.value==""){
+		document.forms(0).nickName.value="匿名";
+	}
+	return true;
+}
+--&gt;
+ </script>
+ <!-- 得到请求参数 -->
+ <!-- 得到infoColumnVo -->
+ <!-- 得到参数VO -->
+ <!-- 文档计数+1 -->
+ <body>
+  <script type="text/javascript" src="/js/jquery-1[1].3.2.min.js">
+  </script>
+  <script type="text/javascript" src="/js/jxrl-1.0.js">
+  </script>
+  <script type="text/JavaScript">
+   &lt;!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i&lt;a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&amp;&amp;i&lt;a.length&amp;&amp;(x=a[i])&amp;&amp;x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))&gt;0&amp;&amp;parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&amp;&amp;d.all) x=d.all[n]; for (i=0;!x&amp;&amp;i&lt;d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&amp;&amp;d.layers&amp;&amp;i&lt;d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x &amp;&amp; d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i&lt;(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//--&gt;
+  </script>
+  <script type="text/javascript">
+   function search(){
+		var searchValue = document.getElementById('searchValue').value.replace(/^\s+|\s+$/g,"");;
+		if(searchValue == '请输入您要查找的关键字...')searchValue = '';
+		if(searchValue == ''){
+          alert("请输入您要查找的关键字");         
+          document.getElementById('searchValue').focus(); 
+        }else{  
+		  var str = "/docinfo/search.jsp?searchTitle=" + escape(searchValue);
+		  window.open(str);
+		  //window.location.href(str);
+		}		
+}
+
+function searchFocus(text){
+		text.value = '';
+}
+	
+function searchBlur(text){
+		if(text.value == '')
+			text.value = '请输入您要查找的关键字...';
+}
+  </script>
+  <script>
+   $(document).ready(function(){	  
+		getCal_json("/portal/proxy/tsxx",function(Cal_json){		    
+			jQuery('#line1').html(Cal_json.begin_year+"-"+Cal_json.end_year+Cal_json.season);
+			jQuery('#line2').html("第"+Cal_json.zhou_num+"周");
+			jQuery('#line3').html(Cal_json.date);
+			jQuery('#line4').html(Cal_json.week);			
+		});
+	});
+  </script>
+  <div id="banner">
+    <div>
+     <a href="http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&amp;itemSeq=29645">
+      http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq;=29645
+     </a>
+    </div>
+   <img id="img_change" src="http://yjsy.cic.tsinghua.edu.cn/docinfo/img/banner.jpg" width="947" height="103" />
+
+  </div>
+  <div id="weather">
+   <ul>
+    <li id="line1">
+    </li>
+    <li class="red" id="line2">
+    </li>
+    <li id="line3">
+    </li>
+    <li id="line4">
+    </li>
+   </ul>
+  </div>
+  <div id="search">
+   <ul>
+    <li>
+     <input id="searchValue" type="text" size="40" value="请输入您要查找的关键字..." style="vertical-align:middle;" onfocus="searchFocus(this)" onblur="searchBlur(this)" />
+     &nbsp;
+     <input type="image" style="vertical-align:middle;" onclick="search()" src="/docinfo/img/button_search.gif" width="82" height="21" />
+    </li>
+   </ul>
+  </div>
+  <div id="center">
+   <!-- 导航部分 -->
+   <div id="nav2">
+    <ul>
+     <li>
+      <span>
+       当前位置:
+      </span>
+     </li>
+     <li>
+      &gt;&gt;
+      <a href="../index.jsp">
+       首页
+      </a>
+     </li>
+     <li>
+      &gt;&gt;
+      <a href="/docinfo/board1/boardlist.jsp?columnId=0010106&amp;parentColumnId=001">
+       教务通知
+      </a>
+     </li>
+    </ul>
+   </div>
+   <!-- 导航部分结束 -->
+   <h3>
+    <span>
+     <font color="">
+      微纳电子系海外学者短期讲学课程--模拟集成电路设计前沿与挑战
+     </font>
+    </span>
+   </h3>
+   <div style="width:90%; margin:10px auto; padding-bottom:10px; border-bottom:#dcdcdc 1px solid; overflow:hidden; ">
+    <ul>
+     <li>
+      <span class="left" style="padding-top:30px;">
+       发布时间:2017-06-19
+            	     &nbsp;&nbsp;
+            	     访问计数:588
+      </span>
+     </li>
+     <li>
+      <span class="left">
+      </span>
+     </li>
+     <li>
+      <a href="javascript:window.close()">
+       <span class="right">
+        [关闭窗口]
+       </span>
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div style="text-align:left; width:90%; magin:0px auto; padding-top:20px;  padding-bottom:20px;word-break:break-all;">
+    <span>
+     <div align="center">
+      <b>
+       微纳电子系海外学者短期讲学课程--模拟集成电路设计前沿与挑战
+      </b>
+     </div>
+     <div align="center">
+      &nbsp;
+     </div>
+     <div>
+      <b>
+       海外学者短期讲学课程报名通知
+      </b>
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【课程名称】：模拟集成电路设计前沿与挑战
+     </div>
+     <div>
+      New Frontiers and Challenges of Analog Integrated Circuits Design
+     </div>
+     <div>
+      【课程号】：Y0260081
+     </div>
+     <div>
+      【学时】：16学时
+     </div>
+     <div>
+      【授课语言】：中文
+     </div>
+     <div>
+      【上课日期】：2017.07.03~2017.07.07（周一到周五）
+     </div>
+     <div>
+      【上课时间】：下午2:00~5:00 (3h)
+     </div>
+     <div>
+      【上课地点】：微电子所新所312会议室
+     </div>
+     <div>
+      【考核方式】：考查
+     </div>
+     <div>
+      【授课对象】：研究生
+     </div>
+     <div>
+      【课容量】：20人
+     </div>
+     <div>
+      【主讲教师】：孙楠教授&nbsp; （University of Texas at Austin, USA）
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【个人简历】：
+     </div>
+     <div>
+      Nan Sun is Associate Professor in the Department of Electrical and Computer Engineering at the University of Texas at Austin. He received the B.S. degree from Tsinghua University, Beijing, China in 2006, where he ranked top in Department of Electronic Engineering. He received the Ph.D. degree from the School of Engineering and Applied Sciences at Harvard University in 2010.
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      Dr. Sun is a Fellow of the AMD Chair in Computer Engineering at UT Austin. He received NSF Career Award in 2013 and Jack Kilby Research Award from UT Austin in 2015. He also received Samsung Fellowship, Hewlett Packard Fellowship, and Analog Devices Outstanding Student Designer Award in 2003, 2006, and 2007, respectively. He won Harvard Teaching Award in three consecutive years: 2008, 2009, and 2010. He serves in the technical program committee of
+      <i>
+       IEEE Custom Integrated Circuits Conference
+      </i>
+      and
+      <i>
+       Asian Solid-State Circuit Conference
+      </i>
+      . He is Associate Editor for
+      <i>
+       IEEE Transactions on Circuits and Systems – I, Regular Papers
+      </i>
+      .
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      His research interests include: 1) analog, mixed-signal, and RF integrated circuits; 2) miniature spin resonance systems; 3) magnetic sensors and image sensors; 4) developing micro- and nano-scale solid-state platforms (silicon ICs and beyond) to analyze biological systems for biotechnology and medicine.
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【预备知识】：模拟电路设计，数字信号处理，数模转换器设计
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【课程简介】：这门暑期课程将介绍模拟集成电路方向最前沿的研究进展。内容包括各种类型高性能的数模/模数转换器，超低功耗的放大器/滤波器，基于时间域和相位域的模拟信号处理，模拟运算和模拟神经网络，以及压缩识别技术。在课程进行当中，我们将阅读很多最近发表的文献，我们也将讨论到目前为止还没有解决的关键技术问题。这门课程的目标不是对新技术的简单介绍，而是要培养直觉理解并且启发创新。这门课程欢迎对模拟集成电路设计有热情并愿意钻研的学生。
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【课程大纲】：
+     </div>
+     <div>
+      1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Advanced SAR ADC
+     </div>
+     <div>
+      1.1&nbsp;&nbsp; Low-power SAR ADC
+     </div>
+     <div>
+      1.2&nbsp;&nbsp; High-speed SAR ADC
+     </div>
+     <div>
+      1.3&nbsp;&nbsp; Time-interleaved SAR ADC
+     </div>
+     <div>
+      1.4&nbsp;&nbsp; High-resolution noise shaping SAR ADC
+     </div>
+     <div>
+      2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Advanced Delta-sigma ADC and DAC
+     </div>
+     <div>
+      2.1 Mismatch shaping techniques
+     </div>
+     <div>
+      2.2 Wide-band continuous-time delta-sigma ADC
+     </div>
+     <div>
+      2.3 Loop filter design with conditionally stable amplifier
+     </div>
+     <div>
+      3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time/phase-domain analog signal processing techniques
+     </div>
+     <div>
+      3.1 VCO based open-loop ADC
+     </div>
+     <div>
+      3.2 VCO based closed-loop ADC
+     </div>
+     <div>
+      3.3 VCO based capacitance-to-digital converter
+     </div>
+     <div>
+      4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ultra-low-power sensor interface design
+     </div>
+     <div>
+      4.1 Ultra-low-power amplifier
+     </div>
+     <div>
+      4.2 Ultra-low-power reference
+     </div>
+     <div>
+      5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Compressive sensing techniques
+     </div>
+     <div>
+      5.1 Compressive-sensing theory
+     </div>
+     <div>
+      5.2 Compressive-sensing based single-channel ADC
+     </div>
+     <div>
+      5.3 Compressive-sensing based multi-channel ADC
+     </div>
+     <div>
+      6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other advanced topics
+     </div>
+     <div>
+      6.1 Analog neural networks
+     </div>
+     <div>
+      6.2 Analog design automation
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【报名联系人】：张老师（
+      <a href="mailto:zhangyifan@tsinghua.edu.cn">
+       zhangyifan@tsinghua.edu.cn
+      </a>
+      ）
+     </div>
+     <div>
+      【报名截止时间】：2017年7月2日（星期日）下午5:00。邮件报名即可，需要提供学号、姓名、院系信息、学生身份（博/硕）、常用邮箱、手机号码。
+     </div>
+    </span>
+   </div>
+   <!-- &lt;div class="clear" style="magin:20px auto;"&gt;&nbsp;&lt;/div&gt; -->
+   <div style="width:90%; margin:20px auto; padding-top:10px; border-top:#dcdcdc 1px solid">
+   </div>
+  </div>
+  <div id="footer_s">
+   <!-- 底部区域开始 -->
+   <p>
+    版权所有:清华大学研究生院&nbsp;&nbsp;&nbsp;&nbsp;技术支持:清华大学信息化技术中心
+   </p>
+   <p style="font-family:Arial;">
+    Copyright&nbsp;&nbsp;
+    <span style="font-size:16px;">
+     &copy;
+    </span>
+    &nbsp;&nbsp;2009 Tsinghua University All Rights Reserved.
+   </p>
+  </div>
+  <!-- 底部区域结束 -->
+ </body>
+</html>

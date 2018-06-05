@@ -1,0 +1,422 @@
+---
+layout:      post
+title:       土木工程系海外学者短期讲学课程：高级交通网络分析——交通网络与大数据分析
+excerpt:     <a href=http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq=29704>http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq=29704</a>
+tags:
+  交通
+  and
+  lecture
+  data
+  of
+modify_date: 2017-06-26
+---
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+   研究生院办公网内网
+  </title>
+  <link href="/docinfo/css/page.css" rel="stylesheet" type="text/css" />
+ </head>
+ <script language="javascript">
+  &lt;!--
+function commentCheck(){
+	if(document.forms(0).content.value==""){
+		alert("评论内容不能为空!");
+		document.forms(0).content.focus();
+		return false;
+	}
+	if(document.forms(0).anonymous.value=="1"&amp;&amp;
+	document.forms(0).nickName.value==""){
+		document.forms(0).nickName.value="匿名";
+	}
+	return true;
+}
+--&gt;
+ </script>
+ <!-- 得到请求参数 -->
+ <!-- 得到infoColumnVo -->
+ <!-- 得到参数VO -->
+ <!-- 文档计数+1 -->
+ <body>
+  <script type="text/javascript" src="/js/jquery-1[1].3.2.min.js">
+  </script>
+  <script type="text/javascript" src="/js/jxrl-1.0.js">
+  </script>
+  <script type="text/JavaScript">
+   &lt;!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i&lt;a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&amp;&amp;i&lt;a.length&amp;&amp;(x=a[i])&amp;&amp;x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))&gt;0&amp;&amp;parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&amp;&amp;d.all) x=d.all[n]; for (i=0;!x&amp;&amp;i&lt;d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&amp;&amp;d.layers&amp;&amp;i&lt;d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x &amp;&amp; d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i&lt;(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//--&gt;
+  </script>
+  <script type="text/javascript">
+   function search(){
+		var searchValue = document.getElementById('searchValue').value.replace(/^\s+|\s+$/g,"");;
+		if(searchValue == '请输入您要查找的关键字...')searchValue = '';
+		if(searchValue == ''){
+          alert("请输入您要查找的关键字");         
+          document.getElementById('searchValue').focus(); 
+        }else{  
+		  var str = "/docinfo/search.jsp?searchTitle=" + escape(searchValue);
+		  window.open(str);
+		  //window.location.href(str);
+		}		
+}
+
+function searchFocus(text){
+		text.value = '';
+}
+	
+function searchBlur(text){
+		if(text.value == '')
+			text.value = '请输入您要查找的关键字...';
+}
+  </script>
+  <script>
+   $(document).ready(function(){	  
+		getCal_json("/portal/proxy/tsxx",function(Cal_json){		    
+			jQuery('#line1').html(Cal_json.begin_year+"-"+Cal_json.end_year+Cal_json.season);
+			jQuery('#line2').html("第"+Cal_json.zhou_num+"周");
+			jQuery('#line3').html(Cal_json.date);
+			jQuery('#line4').html(Cal_json.week);			
+		});
+	});
+  </script>
+  <div id="banner">
+    <div>
+     <a href="http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&amp;itemSeq=29704">
+      http://yjsy.cic.tsinghua.edu.cn/boarddetail_cat.jsp?columnId=0010106&itemSeq;=29704
+     </a>
+    </div>
+   <img id="img_change" src="http://yjsy.cic.tsinghua.edu.cn/docinfo/img/banner.jpg" width="947" height="103" />
+
+  </div>
+  <div id="weather">
+   <ul>
+    <li id="line1">
+    </li>
+    <li class="red" id="line2">
+    </li>
+    <li id="line3">
+    </li>
+    <li id="line4">
+    </li>
+   </ul>
+  </div>
+  <div id="search">
+   <ul>
+    <li>
+     <input id="searchValue" type="text" size="40" value="请输入您要查找的关键字..." style="vertical-align:middle;" onfocus="searchFocus(this)" onblur="searchBlur(this)" />
+     &nbsp;
+     <input type="image" style="vertical-align:middle;" onclick="search()" src="/docinfo/img/button_search.gif" width="82" height="21" />
+    </li>
+   </ul>
+  </div>
+  <div id="center">
+   <!-- 导航部分 -->
+   <div id="nav2">
+    <ul>
+     <li>
+      <span>
+       当前位置:
+      </span>
+     </li>
+     <li>
+      &gt;&gt;
+      <a href="../index.jsp">
+       首页
+      </a>
+     </li>
+     <li>
+      &gt;&gt;
+      <a href="/docinfo/board1/boardlist.jsp?columnId=0010106&amp;parentColumnId=001">
+       教务通知
+      </a>
+     </li>
+    </ul>
+   </div>
+   <!-- 导航部分结束 -->
+   <h3>
+    <span>
+     <font color="">
+      土木工程系海外学者短期讲学课程：高级交通网络分析——交通网络与大数据分析
+     </font>
+    </span>
+   </h3>
+   <div style="width:90%; margin:10px auto; padding-bottom:10px; border-bottom:#dcdcdc 1px solid; overflow:hidden; ">
+    <ul>
+     <li>
+      <span class="left" style="padding-top:30px;">
+       发布时间:2017-06-26
+            	     &nbsp;&nbsp;
+            	     访问计数:629
+      </span>
+     </li>
+     <li>
+      <span class="left">
+      </span>
+     </li>
+     <li>
+      <a href="javascript:window.close()">
+       <span class="right">
+        [关闭窗口]
+       </span>
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div style="text-align:left; width:90%; magin:0px auto; padding-top:20px;  padding-bottom:20px;word-break:break-all;">
+    <span>
+     <div>
+      土木工程系海外学者短期讲学课程：高级交通网络分析——交通网络与大数据分析
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【课程名称】高级交通网络分析——交通网络与大数据分析（Advanced Transportation Network Analysis—Networks and Big Data for Smart Transportation Analytics）
+     </div>
+     <div>
+      【课程编号】Y0030191
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【授课对象】研究生及高年级本科生
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【授课语言】英文
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【上课时间】2017年7月10日 8:00-11:30；11日：8:00-11:30；7月13日 8:00-11:30；14日：8:00-11:30
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【上课地点】新土木馆（何善衡楼）300教室
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【考核方式】考查，1学分
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【报名方式】手动选课，即日起接受报名。请准备选课的同学在2017年7月9日之前将“学号”“姓名”“所在院系”“联系方式（手机）”信息发送至
+      <a href="mailto:604612083@qq.com">
+       604612083@qq.com
+      </a>
+      报名，邮件请注明“选课申请”。
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【课程简介】
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      本课程将侧重于网络与数据挖掘在交通运输系统中的运用。主要会有关于基础网络分析、统计分析、数据清理及基于大数据的数据挖掘技术等相关主题的讲解与应用。学生将学会使用所教授的概念和方法去解决他们感兴趣的研究领域。
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      本课程适于土木工程系、自动化系、汽车工程系、工业工程系相关专业研究生来选。
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【教学大纲】
+     </div>
+     <ol type="1">
+      <li>
+       <b>
+        Introduction:
+       </b>
+       [lecture 1]&nbsp;What is data mining? What makes it a new and unique discipline? Relationship between Data Warehousing, On-line Analytical Processing, and Data Mining.
+      </li>
+     </ol>
+     <div>
+      [lecture 2&amp;3]&nbsp; Preliminaries of Network Analysis and Optimization.
+     </div>
+     <div>
+      [lecture 4]&nbsp;Data Warehousing and&nbsp;Data mining process: Data preparation/cleansing, task identification.
+     </div>
+     <ol type="1" start="2">
+      <li>
+       <b>
+        Association rule:
+       </b>
+       [lecture 5] Association Rule Mining: Apriori and FP growth.
+      </li>
+      <li>
+       <b>
+        Classification:
+       </b>
+       [lecture 6 and 7] Bayes classifier
+      </li>
+      <li>
+       <b>
+        Clustering
+       </b>
+       : &nbsp;[lecture 8] basics of clustering and mixture models.
+      </li>
+      <li>
+       <b>
+        Networks
+       </b>
+       : [Lecture 9 and 10] Notion of Equilibrium and how to model taxi markets using big data and network analysis
+      </li>
+      <li>
+       <b>
+        Network Structure
+       </b>
+       : [Lecture 11 and 12] How to measure large scale networks, structure and function and their applications to smart mobility
+      </li>
+      <li>
+       <b>
+        Classification techniques in networks with big data
+       </b>
+      </li>
+     </ol>
+     <div>
+      [lecture 13] k-means and k-medoids.
+     </div>
+     <div>
+      [lecture 14] supervised learning – rule-based classification. &nbsp;
+     </div>
+     <ol type="1" start="8">
+      <li>
+       <b>
+        Summary of recent advances in networks and big data in transportation
+       </b>
+       [lecture 15] Instructor will discuss various challenges and experience with big data analytics and self driving cars research if time permits
+      </li>
+      <li>
+       <b>
+        Presentation by students related to their research
+       </b>
+       [lecture 16]
+      </li>
+     </ol>
+     <div>
+      <b>
+       Note: Some of these topics may be covered early or late depending on the questions and pace in the class.
+      </b>
+     </div>
+     <div>
+      A student completing this course is expected to be able to:
+     </div>
+     <ol type="1">
+      <li>
+       Prepare and clean datasets for analysis of patterns
+      </li>
+      <li>
+       Apply the concept of regression using datasets
+      </li>
+      <li>
+       Understand basic concepts of game theory in transportation systems
+      </li>
+      <li>
+       Apply the concept of clustering to identify trends within datasets
+      </li>
+      <li>
+       Be aware of the concepts of supervised learning algorithms to analyze data
+      </li>
+      <li>
+       Apply the concepts to emerging smart mobility applications such as taxi analytics, smart transportation
+      </li>
+     </ol>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      主要教材：无指定教材，参考课堂讲义
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div>
+      【授课教师简介】
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div align="left">
+      Ukkusuri教授普度大学教授，是交通运输规划与管理领域国际著名学者，在交通规划、交通网络分析方面研究深入，在交通大数据和数据驱动的交通模型研究方面取得了众多学术成果。Ukkusuri教授现今总共发表了超过180篇期刊论文，其在交通领域顶级期刊论文数及引用次数均处于同行前列，学术贡献突出。Ukkusuri教授同时兼任多个交通领域期刊编委职务，包括Transportation Research Part B, C, Network Spatial Economics, Transportmetrica Part B。
+     </div>
+     <div align="left">
+      &nbsp;
+     </div>
+     <div>
+      Ukkusuri教授在其任职的Rensselaer Polytechnic Institute以及Purdue University开设过总共12门课程，包括交通系统建模，动态交通分配，交通工程，交通控制以及交通货运系统等课程。
+     </div>
+     <div>
+      &nbsp;
+     </div>
+     <div align="right">
+      土木工程系
+     </div>
+     <div align="right">
+      &nbsp;
+     </div>
+     <div align="right">
+      2017.6.26
+     </div>
+    </span>
+   </div>
+   <!-- &lt;div class="clear" style="magin:20px auto;"&gt;&nbsp;&lt;/div&gt; -->
+   <div style="width:90%; margin:20px auto; padding-top:10px; border-top:#dcdcdc 1px solid">
+   </div>
+  </div>
+  <div id="footer_s">
+   <!-- 底部区域开始 -->
+   <p>
+    版权所有:清华大学研究生院&nbsp;&nbsp;&nbsp;&nbsp;技术支持:清华大学信息化技术中心
+   </p>
+   <p style="font-family:Arial;">
+    Copyright&nbsp;&nbsp;
+    <span style="font-size:16px;">
+     &copy;
+    </span>
+    &nbsp;&nbsp;2009 Tsinghua University All Rights Reserved.
+   </p>
+  </div>
+  <!-- 底部区域结束 -->
+ </body>
+</html>
